@@ -123,5 +123,21 @@
       54,
       50979
     ]
+  },
+  {
+    "duration": 1.795927,
+    "colour": "amber",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 8,
+    "time": [
+      2023,
+      7,
+      13,
+      10,
+      29,
+      39,
+      296861
+    ]
   }
 ]
