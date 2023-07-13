@@ -2,16 +2,40 @@
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=866594
+Using --random-order-seed=926847
 
 rootdir: /sandbox
 plugins: cov-2.11.1, mock-3.5.1, random-order-1.0.4
-collecting ... collected 5 items
+collecting ... collected 6 items
 
-test_doors.py::test_open_closed_door PASSED                              [ 20%]
-test_doors.py::test_create_list_of_doors PASSED                          [ 40%]
-test_doors.py::test_create_default_door PASSED                           [ 60%]
-test_doors.py::test_close_open_door PASSED                               [ 80%]
-test_doors.py::test_all_doors_are_false PASSED                           [100%]
+test_doors.py::test_all_doors_are_false PASSED                           [ 16%]
+test_doors.py::test_create_list_of_doors FAILED                          [ 33%]
+test_doors.py::test_open_closed_door PASSED                              [ 50%]
+test_doors.py::test_toggle_all_doors_should_make_all_open FAILED         [ 66%]
+test_doors.py::test_create_default_door PASSED                           [ 83%]
+test_doors.py::test_close_open_door PASSED                               [100%]
 
-============================== 5 passed in 0.04s ===============================
+=================================== FAILURES ===================================
+__________________________ test_create_list_of_doors ___________________________
+
+    def test_create_list_of_doors():
+        door_list = DoorList(doors=5)
+>       assert len(door_list.doors) == 5
+E       assert 8 == 5
+E         +8
+E         -5
+
+test_doors.py:19: AssertionError
+__________________ test_toggle_all_doors_should_make_all_open __________________
+
+    def test_toggle_all_doors_should_make_all_open():
+        doorAmount = 3
+        door_list = DoorList(doors=doorAmount)
+>       door_list.toggle_doors(step=1)
+E       AttributeError: 'DoorList' object has no attribute 'toggle_doors'
+
+test_doors.py:30: AttributeError
+=========================== short test summary info ============================
+FAILED test_doors.py::test_create_list_of_doors - assert 8 == 5
+FAILED test_doors.py::test_toggle_all_doors_should_make_all_open - AttributeE...
+========================= 2 failed, 4 passed in 0.09s ==========================
