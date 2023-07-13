@@ -17,3 +17,7 @@ def test_create_default_door():
 def test_create_list_of_doors():
     door_list = DoorList(doors=5)
     assert len(door_list.doors) == 5
+
+def test_all_doors_are_false():
+    door_list = DoorList(doors=3)
+    assert door_list.list_doors = [False, False, False]

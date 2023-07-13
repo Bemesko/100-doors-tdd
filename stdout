@@ -2,15 +2,39 @@
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=502539
+Using --random-order-seed=504611
 
 rootdir: /sandbox
 plugins: cov-2.11.1, mock-3.5.1, random-order-1.0.4
-collecting ... collected 4 items
+collecting ... collected 0 items / 1 error
 
-test_doors.py::test_open_closed_door PASSED                              [ 25%]
-test_doors.py::test_create_list_of_doors PASSED                          [ 50%]
-test_doors.py::test_create_default_door PASSED                           [ 75%]
-test_doors.py::test_close_open_door PASSED                               [100%]
-
-============================== 4 passed in 0.04s ===============================
+==================================== ERRORS ====================================
+________________________ ERROR collecting test_doors.py ________________________
+/usr/local/lib/python3.9/site-packages/_pytest/python.py:578: in _importtestmodule
+    mod = import_path(self.fspath, mode=importmode)
+/usr/local/lib/python3.9/site-packages/_pytest/pathlib.py:531: in import_path
+    importlib.import_module(module_name)
+/usr/local/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1030: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1007: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:986: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:680: in _load_unlocked
+    ???
+/usr/local/lib/python3.9/site-packages/_pytest/assertion/rewrite.py:161: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+/usr/local/lib/python3.9/site-packages/_pytest/assertion/rewrite.py:354: in _rewrite_test
+    tree = ast.parse(source, filename=fn_)
+/usr/local/lib/python3.9/ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File "/sandbox/test_doors.py", line 23
+E       assert door_list.list_doors = [False, False, False]
+E                                   ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR test_doors.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.42s ===============================
