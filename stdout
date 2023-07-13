@@ -2,7 +2,7 @@
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=223505
+Using --random-order-seed=289624
 
 rootdir: /sandbox
 plugins: cov-2.11.1, mock-3.5.1, random-order-1.0.4
@@ -30,11 +30,11 @@ ________________________ ERROR collecting test_doors.py ________________________
     tree = ast.parse(source, filename=fn_)
 /usr/local/lib/python3.9/ast.py:50: in parse
     return compile(source, filename, mode, flags,
-E     File "/sandbox/test_doors.py", line 23
-E       assert door_list.list_doors() = [False, False, False]
-E                                     ^
+E     File "/sandbox/test_doors.py", line 25
+E       assert open_doors = 0
+E                         ^
 E   SyntaxError: invalid syntax
 =========================== short test summary info ============================
 ERROR test_doors.py
 !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-=============================== 1 error in 0.43s ===============================
+=============================== 1 error in 0.40s ===============================
