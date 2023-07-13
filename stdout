@@ -2,24 +2,13 @@
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=967434
+Using --random-order-seed=488006
 
 rootdir: /sandbox
 plugins: cov-2.11.1, mock-3.5.1, random-order-1.0.4
 collecting ... collected 2 items
 
-test_doors.py::test_close_open_door PASSED                               [ 50%]
-test_doors.py::test_open_closed_door FAILED                              [100%]
+test_doors.py::test_open_closed_door PASSED                              [ 50%]
+test_doors.py::test_close_open_door PASSED                               [100%]
 
-=================================== FAILURES ===================================
-____________________________ test_open_closed_door _____________________________
-
-    def test_open_closed_door():
-        door = Door(is_open=False)
->       door.toogle_open()
-E       AttributeError: 'Door' object has no attribute 'toogle_open'
-
-test_doors.py:10: AttributeError
-=========================== short test summary info ============================
-FAILED test_doors.py::test_open_closed_door - AttributeError: 'Door' object h...
-========================= 1 failed, 1 passed in 0.06s ==========================
+============================== 2 passed in 0.04s ===============================

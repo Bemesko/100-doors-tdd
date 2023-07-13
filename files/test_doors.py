@@ -7,5 +7,5 @@ def test_close_open_door():
     
 def test_open_closed_door():
     door = Door(is_open=False)
-    door.toogle_open()
+    door.toggle_open()
     assert door.is_open is True
