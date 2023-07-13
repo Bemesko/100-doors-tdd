@@ -20,6 +20,6 @@ def test_create_list_of_doors():
 
 def test_all_doors_are_false():
     door_list = DoorList(doors=3)
-    open_doors = sum(door_list)
+    open_doors = sum(door_list.doors)
     
     assert open_doors == 0
