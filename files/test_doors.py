@@ -22,4 +22,4 @@ def test_all_doors_are_false():
     door_list = DoorList(doors=3)
     open_doors = sum(door_list)
     
-    assert open_doors = 0
+    assert open_doors == 0
