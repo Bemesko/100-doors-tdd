@@ -17,3 +17,8 @@ class DoorList:
     def list_open_doors(self):
         doors_list = map(lambda door : door.is_open, self.doors)
         return doors_list
+    
+    def toggle_doors(self, step=1):
+        # range(start, stop, step)
+        for i in range(0, len(doors)-1, step):
+            doors[i].toggle_open()

@@ -2,17 +2,17 @@
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=923431
+Using --random-order-seed=74364
 
 rootdir: /sandbox
 plugins: cov-2.11.1, mock-3.5.1, random-order-1.0.4
 collecting ... collected 6 items
 
 test_doors.py::test_create_list_of_doors PASSED                          [ 16%]
-test_doors.py::test_all_doors_are_false PASSED                           [ 33%]
-test_doors.py::test_toggle_all_doors_should_make_all_open FAILED         [ 50%]
-test_doors.py::test_close_open_door PASSED                               [ 66%]
-test_doors.py::test_create_default_door PASSED                           [ 83%]
+test_doors.py::test_toggle_all_doors_should_make_all_open FAILED         [ 33%]
+test_doors.py::test_close_open_door PASSED                               [ 50%]
+test_doors.py::test_create_default_door PASSED                           [ 66%]
+test_doors.py::test_all_doors_are_false PASSED                           [ 83%]
 test_doors.py::test_open_closed_door PASSED                              [100%]
 
 =================================== FAILURES ===================================
@@ -23,9 +23,18 @@ __________________ test_toggle_all_doors_should_make_all_open __________________
         doorAmount = 3
         door_list = DoorList(doors=doorAmount)
 >       door_list.toggle_doors(step=1)
-E       AttributeError: 'DoorList' object has no attribute 'toggle_doors'
 
-test_doors.py:33: AttributeError
+test_doors.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <doors.DoorList object at 0x7fd3495566a0>, step = 1
+
+    def toggle_doors(self, step=1):
+        # range(start, stop, step)
+>       for i in range(0, len(doors)-1, step):
+E       NameError: name 'doors' is not defined
+
+doors.py:23: NameError
 =========================== short test summary info ============================
-FAILED test_doors.py::test_toggle_all_doors_should_make_all_open - AttributeE...
-========================= 1 failed, 5 passed in 0.07s ==========================
+FAILED test_doors.py::test_toggle_all_doors_should_make_all_open - NameError:...
+========================= 1 failed, 5 passed in 0.06s ==========================
