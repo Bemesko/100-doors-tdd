@@ -1,0 +1,38 @@
+/sandbox/doors.py:18:37: E203 whitespace before ':'
+        doors_list = map(lambda door : door.is_open, self.doors)
+                                    ^
+    Avoid extraneous whitespace.
+
+    Avoid extraneous whitespace in these situations:
+    - Immediately inside parentheses, brackets or braces.
+    - Immediately before a comma, semicolon, or colon.
+
+    Okay: spam(ham[1], {eggs: 2})
+    E201: spam( ham[1], {eggs: 2})
+    E201: spam(ham[ 1], {eggs: 2})
+    E201: spam(ham[1], { eggs: 2})
+    E202: spam(ham[1], {eggs: 2} )
+    E202: spam(ham[1 ], {eggs: 2})
+    E202: spam(ham[1], {eggs: 2 })
+
+    E203: if x == 4: print x, y; x, y = y , x
+    E203: if x == 4: print x, y ; x, y = y, x
+    E203: if x == 4 : print x, y; x, y = y, x
+/sandbox/doors.py:19:26: W292 no newline at end of file
+        return doors_list
+                         ^
+    Trailing blank lines are superfluous.
+
+    Okay: spam(1)
+    W391: spam(1)\n
+
+    However the last line should end with a new line (warning W292).
+/sandbox/test_doors.py:25:27: W292 no newline at end of file
+    assert open_doors == 0
+                          ^
+    Trailing blank lines are superfluous.
+
+    Okay: spam(1)
+    W391: spam(1)\n
+
+    However the last line should end with a new line (warning W292).
