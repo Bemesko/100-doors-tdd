@@ -1,4 +1,4 @@
-from doors import Door
+from doors import Door, DoorList
 
 def test_close_open_door():
     door = Door(is_open=True)
