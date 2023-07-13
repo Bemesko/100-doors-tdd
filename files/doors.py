@@ -6,3 +6,10 @@ class Door:
 
     def toggle_open(self):
         self.is_open = not self.is_open
+
+class DoorList:
+    doors = []
+    
+    def __init__(self, doors: int):
+        for i in range(doors):
+            doors[i] = door(False)
