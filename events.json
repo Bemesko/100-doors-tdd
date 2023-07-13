@@ -11,5 +11,21 @@
       28,
       924728
     ]
+  },
+  {
+    "duration": 2.118601,
+    "colour": "amber",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 1,
+    "time": [
+      2023,
+      7,
+      13,
+      10,
+      22,
+      8,
+      638386
+    ]
   }
 ]

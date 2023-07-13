@@ -5,3 +5,12 @@ The third time, every 3rd door (door #3, #6, #9, ...), etc, until you only visit
 Question: What state are the doors in after the last pass? Which are open, which are closed?
 
 [Source http://rosettacode.org]
+
+- test problem with 5 doors
+- display state off all doors
+- iterate through all doors using for loop with i increasing every iteration
+- this iterations goes from 1 to n, where n is the number of doors
+- class door
+    - attribute is_open
+    - method toggle_open
+    - __string__ to help print the door
