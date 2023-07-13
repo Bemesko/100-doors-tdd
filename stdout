@@ -2,36 +2,12 @@
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=763149
+Using --random-order-seed=927122
 
 rootdir: /sandbox
 plugins: cov-2.11.1, mock-3.5.1, random-order-1.0.4
-collecting ... collected 3 items
+collecting ... collected 1 item
 
-test_doors.py::test_close_open_door PASSED                               [ 33%]
-test_hiker.py::test_instance_method FAILED                               [ 66%]
-test_hiker.py::test_global_function FAILED                               [100%]
+test_doors.py::test_close_open_door PASSED                               [100%]
 
-=================================== FAILURES ===================================
-_____________________________ test_instance_method _____________________________
-
-    def test_instance_method():
->       assert Hiker().instance_answer() == 42
-E       assert 54 == 42
-E         +54
-E         -42
-
-test_hiker.py:7: AssertionError
-_____________________________ test_global_function _____________________________
-
-    def test_global_function():
->       assert global_answer() == 42
-E       assert 54 == 42
-E         +54
-E         -42
-
-test_hiker.py:4: AssertionError
-=========================== short test summary info ============================
-FAILED test_hiker.py::test_instance_method - assert 54 == 42
-FAILED test_hiker.py::test_global_function - assert 54 == 42
-========================= 2 failed, 1 passed in 0.09s ==========================
+============================== 1 passed in 0.03s ===============================
