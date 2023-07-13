@@ -2,13 +2,24 @@
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=488006
+Using --random-order-seed=860433
 
 rootdir: /sandbox
 plugins: cov-2.11.1, mock-3.5.1, random-order-1.0.4
-collecting ... collected 2 items
+collecting ... collected 3 items
 
-test_doors.py::test_open_closed_door PASSED                              [ 50%]
+test_doors.py::test_create_list_of_doors FAILED                          [ 33%]
+test_doors.py::test_open_closed_door PASSED                              [ 66%]
 test_doors.py::test_close_open_door PASSED                               [100%]
 
-============================== 2 passed in 0.04s ===============================
+=================================== FAILURES ===================================
+__________________________ test_create_list_of_doors ___________________________
+
+    def test_create_list_of_doors():
+>       door_list = DoorList(doors=5)
+E       NameError: name 'DoorList' is not defined
+
+test_doors.py:14: NameError
+=========================== short test summary info ============================
+FAILED test_doors.py::test_create_list_of_doors - NameError: name 'DoorList' ...
+========================= 1 failed, 2 passed in 0.06s ==========================
