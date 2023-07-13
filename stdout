@@ -2,16 +2,16 @@
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=46108
+Using --random-order-seed=693881
 
 rootdir: /sandbox
 plugins: cov-2.11.1, mock-3.5.1, random-order-1.0.4
 collecting ... collected 4 items
 
-test_doors.py::test_close_open_door PASSED                               [ 25%]
+test_doors.py::test_open_closed_door PASSED                              [ 25%]
 test_doors.py::test_create_list_of_doors PASSED                          [ 50%]
 test_doors.py::test_create_default_door FAILED                           [ 75%]
-test_doors.py::test_open_closed_door PASSED                              [100%]
+test_doors.py::test_close_open_door PASSED                               [100%]
 
 =================================== FAILURES ===================================
 ___________________________ test_create_default_door ___________________________
