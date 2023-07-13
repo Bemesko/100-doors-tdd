@@ -1,5 +1,5 @@
 class Door:
-    is_open = false
+    is_open = False
     
     def __init__(self: Door, is_open: bool):
         self.is_open = is_open

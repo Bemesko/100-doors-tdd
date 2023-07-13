@@ -2,7 +2,7 @@
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=585071
+Using --random-order-seed=570000
 
 rootdir: /sandbox
 plugins: cov-2.11.1, mock-3.5.1, random-order-1.0.4
@@ -14,10 +14,10 @@ test_doors.py:1: in <module>
     from doors import Door
 doors.py:1: in <module>
     class Door:
-doors.py:2: in Door
-    is_open = false
-E   NameError: name 'false' is not defined
+doors.py:4: in Door
+    def __init__(self: Door, is_open: bool):
+E   NameError: name 'Door' is not defined
 =========================== short test summary info ============================
-ERROR test_doors.py - NameError: name 'false' is not defined
+ERROR test_doors.py - NameError: name 'Door' is not defined
 !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
 =============================== 1 error in 0.21s ===============================
