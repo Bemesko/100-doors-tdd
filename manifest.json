@@ -1,0 +1,21 @@
+{
+  "display_name": "Python, pytest",
+  "image_name": "cyberdojofoundation/python_pytest:8965a76",
+  "filename_extension": [
+    ".py"
+  ],
+  "max_seconds": 10,
+  "tab_size": 4,
+  "exercise": "100 doors",
+  "version": 2,
+  "created": [
+    2023,
+    7,
+    13,
+    10,
+    15,
+    28,
+    924728
+  ],
+  "id": "3QxlmN"
+}
