@@ -20,5 +20,5 @@ class DoorList:
     
     def toggle_doors(self, step=1):
         # range(start, stop, step)
-        for i in range(0, len(doors)-1, step):
+        for i in range(0, len(self.doors)-1, step):
             doors[i].toggle_open()

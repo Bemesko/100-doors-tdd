@@ -2,18 +2,18 @@
 platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=74364
+Using --random-order-seed=141242
 
 rootdir: /sandbox
 plugins: cov-2.11.1, mock-3.5.1, random-order-1.0.4
 collecting ... collected 6 items
 
-test_doors.py::test_create_list_of_doors PASSED                          [ 16%]
-test_doors.py::test_toggle_all_doors_should_make_all_open FAILED         [ 33%]
-test_doors.py::test_close_open_door PASSED                               [ 50%]
-test_doors.py::test_create_default_door PASSED                           [ 66%]
-test_doors.py::test_all_doors_are_false PASSED                           [ 83%]
-test_doors.py::test_open_closed_door PASSED                              [100%]
+test_doors.py::test_toggle_all_doors_should_make_all_open FAILED         [ 16%]
+test_doors.py::test_open_closed_door PASSED                              [ 33%]
+test_doors.py::test_create_default_door PASSED                           [ 50%]
+test_doors.py::test_all_doors_are_false PASSED                           [ 66%]
+test_doors.py::test_close_open_door PASSED                               [ 83%]
+test_doors.py::test_create_list_of_doors FAILED                          [100%]
 
 =================================== FAILURES ===================================
 __________________ test_toggle_all_doors_should_make_all_open __________________
@@ -27,14 +27,27 @@ __________________ test_toggle_all_doors_should_make_all_open __________________
 test_doors.py:33: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <doors.DoorList object at 0x7fd3495566a0>, step = 1
+self = <doors.DoorList object at 0x7ff55b208fa0>, step = 1
 
     def toggle_doors(self, step=1):
         # range(start, stop, step)
->       for i in range(0, len(doors)-1, step):
-E       NameError: name 'doors' is not defined
+        for i in range(0, len(self.doors)-1, step):
+>           doors[i].toggle_open()
+E           NameError: name 'doors' is not defined
 
-doors.py:23: NameError
+doors.py:24: NameError
+__________________________ test_create_list_of_doors ___________________________
+
+    def test_create_list_of_doors():
+        door_list = None
+        door_list = DoorList(doors=5)
+>       assert len(door_list.doors) == 5
+E       assert 11 == 5
+E         +11
+E         -5
+
+test_doors.py:20: AssertionError
 =========================== short test summary info ============================
 FAILED test_doors.py::test_toggle_all_doors_should_make_all_open - NameError:...
-========================= 1 failed, 5 passed in 0.06s ==========================
+FAILED test_doors.py::test_create_list_of_doors - assert 11 == 5
+========================= 2 failed, 4 passed in 0.10s ==========================
