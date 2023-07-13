@@ -12,4 +12,4 @@ class DoorList:
     
     def __init__(self, doors: int):
         for i in range(doors):
-            self.doors[i] = Door(False)
+            self.doors.append(Door(False))
