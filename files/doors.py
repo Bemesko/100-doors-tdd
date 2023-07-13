@@ -13,3 +13,7 @@ class DoorList:
     def __init__(self, doors: int):
         for i in range(doors):
             self.doors.append(Door(False))
+            
+    def list_doors(self):
+        doors_list = map(lambda door : door.is_open, self.doors)
+        return doors_list

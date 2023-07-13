@@ -20,4 +20,4 @@ def test_create_list_of_doors():
 
 def test_all_doors_are_false():
     door_list = DoorList(doors=3)
-    assert door_list.list_doors = [False, False, False]
+    assert door_list.list_doors() = [False, False, False]
