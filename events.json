@@ -107,5 +107,21 @@
       43,
       156522
     ]
+  },
+  {
+    "duration": 2.110207,
+    "colour": "green",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 7,
+    "time": [
+      2023,
+      7,
+      13,
+      10,
+      28,
+      54,
+      50979
+    ]
   }
 ]

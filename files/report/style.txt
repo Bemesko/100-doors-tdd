@@ -1,32 +1,5 @@
-/sandbox/doors.py:8:40: W292 no newline at end of file
-        self.is_open = not self.is_open
-                                       ^
-    Trailing blank lines are superfluous.
-
-    Okay: spam(1)
-    W391: spam(1)\n
-
-    However the last line should end with a new line (warning W292).
-/sandbox/test_doors.py:6:25: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
-    assert door.is_open == False
-                        ^
-    Comparison to singletons should use "is" or "is not".
-
-    Comparisons to singletons like None should always be done
-    with "is" or "is not", never the equality operators.
-
-    Okay: if arg is not None:
-    E711: if arg != None:
-    E711: if None == arg:
-    E712: if arg == True:
-    E712: if False == arg:
-
-    Also, beware of writing if x when you really mean if x is not None
-    -- e.g. when testing whether a variable or argument that defaults to
-    None was set to some other value.  The other value might have a type
-    (such as a container) that could be false in a boolean context!
 /sandbox/test_doors.py:6:33: W292 no newline at end of file
-    assert door.is_open == False
+    assert door.is_open is False
                                 ^
     Trailing blank lines are superfluous.
 
