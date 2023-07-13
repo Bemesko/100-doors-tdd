@@ -14,3 +14,4 @@ Question: What state are the doors in after the last pass? Which are open, which
     - attribute is_open
     - method toggle_open
     - __string__ to help print the door
+- class DoorList
