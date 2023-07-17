@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.1, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- /usr/local/bin/python
+cachedir: .pytest_cache
+Using --random-order-bucket=global
+Using --random-order-seed=308649
+
+rootdir: /sandbox
+plugins: cov-2.11.1, mock-3.5.1, random-order-1.0.4
+collecting ... collected 9 items
+
+test_christmas.py::test_should_return_first_present_for_1 PASSED         [ 11%]
+test_christmas.py::test_should_return_first_verse_for_day_1 PASSED       [ 22%]
+test_christmas.py::test_should_return_eleventh_present_for_11 PASSED     [ 33%]
+test_christmas.py::test_should_return_unknown_present_for_invalid_day PASSED [ 44%]
+test_christmas.py::test_should_convert_5_to_fitfh PASSED                 [ 55%]
+test_christmas.py::test_should_return_second_present_for_2 PASSED        [ 66%]
+test_christmas.py::test_should_return_second_verse_for_day_2 PASSED      [ 77%]
+test_christmas.py::test_should_convert_12_to_twelfth PASSED              [ 88%]
+test_christmas.py::test_should_convert_1_to_first PASSED                 [100%]
+
+============================== 9 passed in 0.05s ===============================

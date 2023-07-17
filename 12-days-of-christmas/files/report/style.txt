@@ -1,0 +1,26 @@
+/sandbox/test_christmas.py:25:81: E501 line too long (113 > 80 characters)
+    assert sing_verse(1) == 'On the first day of Christmas my true love gave to me: A partridge in a pear tree. '
+                                                                                ^
+    Limit all lines to a maximum of 79 characters.
+
+    There are still many devices around that are limited to 80 character
+    lines; plus, limiting windows to 80 characters makes it possible to
+    have several windows side-by-side.  The default wrapping on such
+    devices looks ugly.  Therefore, please limit all lines to a maximum
+    of 79 characters. For flowing long blocks of text (docstrings or
+    comments), limiting the length to 72 characters is recommended.
+
+    Reports error E501.
+/sandbox/test_christmas.py:28:81: E501 line too long (135 > 80 characters)
+    assert sing_verse(2) == 'On the second day of Christmas my true love gave to me: Two turtle doves and A partridge in a pear tree. '
+                                                                                ^
+    Limit all lines to a maximum of 79 characters.
+
+    There are still many devices around that are limited to 80 character
+    lines; plus, limiting windows to 80 characters makes it possible to
+    have several windows side-by-side.  The default wrapping on such
+    devices looks ugly.  Therefore, please limit all lines to a maximum
+    of 79 characters. For flowing long blocks of text (docstrings or
+    comments), limiting the length to 72 characters is recommended.
+
+    Reports error E501.
